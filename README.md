@@ -2,7 +2,8 @@
 
 Ez a Project egy Arduino alapú zsilipvezérlő rendszer működését mutatja be. 
 
-TinkerCad elérhetőség: https://www.tinkercad.com/things/lNXLO9TRW8p-zsilipelesriaszto-vezerlessel
+TinkerCad elérhetőség: https://www.tinkercad.com/things/fgj0YUyewr7-zsilipes-beleptetes-jelenletszamolassal-es-riasztokezelessel?sharecode=iQvcjAV0DgIMQSb-Zdnnwvowykz98aeRw-UrZ0dSfg4
+
 
 1. Bevezetés
 Ez a dokumentum egy Arduino alapú zsilipvezérlő rendszer működését mutatja be. A rendszer célja, hogy két ajtó között biztonságos, szabályozott átjárást biztosítson, megakadályozva, hogy egyszerre mindkét ajtó nyitva legyen. Emellett a rendszer nyilvántartja a bent tartózkodók számát, automatikusan élesíti vagy kikapcsolja a riasztást, és mozgásérzékelő segítségével felügyeli a helyiséget.
@@ -73,7 +74,7 @@ A riasztás akkor éles, ha:
 Az LCD kijelző ilyenkor ezt mutatja: „Rendszer kikapcs”
 
 5/2 Riasztás aktiválása
-Ha:       a bent tartózkodók száma 0, és a PIR mozgást érzékel,
+Ha:a bent tartózkodók száma 0, és a PIR mozgást érzékel,
 akkor a rendszer riasztást indít:
 -a riasztó LED világít,
 -a buzzer hangot ad,
@@ -123,6 +124,8 @@ A kijelző folyamatos frissítése villogást okozott. Megoldás: csak akkor fri
 Ezeket mind javítottam.
 - Létszám ugrálása
 A rendszer kezdetben minden ajtónyitást belépésnek vagy kilépésnek érzékelt. Megoldás: csak akkor számol, ha az ajtó nyitása engedélyezett volt.
+
+Sajnos nem találtam nyitásérzékelőt a TinkerCad-ben, ezért csak nyomógombok imitáljék az ajtónyitást,ezért az ajtó nyitva tartását, csak egy átkötéssel tudtam próbálni, így lehet kipróbálni a zsilipelés funkciót.
 
 -Zsilip logika hibái
 Előfordult, hogy a rendszer túl korán vagy túl későn jelezte a zsilip foglaltságát. Megoldás: a zsilip foglalt állapot csak akkor jelenik meg, ha mindkét ajtót egyszerre próbálják nyitni.
